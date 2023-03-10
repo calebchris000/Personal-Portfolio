@@ -1,10 +1,16 @@
 $blue: #003949;
-
+$orange: #ffa500;
 .navbar {
   display: flex;
   justify-content: space-between;
   position: relative;
   height: 60px;
+  background-color: $orange;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 9;
 }
 
 .navlinks {
@@ -50,12 +56,8 @@ $blue: #003949;
   width: 40px;
   box-sizing: border-box;
   margin: 16px;
+  z-index: 9;
   align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
   .bar {
     display: block;
     height: 8px;
