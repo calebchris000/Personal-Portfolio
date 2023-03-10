@@ -1,0 +1,69 @@
+$font-poppins: "Poppins", "san serif";
+
+@mixin inputs {
+    border-radius: 50px;
+    background: #ffa500;
+    box-shadow: inset 20px 20px 60px #d98c00, inset -20px -20px 60px #ffbe00;
+  }
+
+  @mixin padding {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #e69500, #ffb100);
+    box-shadow: 20px 20px 60px #d98c00, -20px -20px 60px #ffbe00;
+  }
+  
+  @mixin project {
+    border-radius: 30px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #ffb100, #e69500);
+    box-shadow: 20px 20px 60px #d98c00, -20px -20px 60px #ffbe00;
+  }
+  
+  .contact-email {
+    @include padding();
+  
+    .emailMe {
+      font-family: $font-poppins;
+      text-align: center;
+      margin: 10px 0;
+      z-index: 2;
+    }
+  
+    input {
+      @include inputs();
+      z-index: 1;
+      border: none;
+      width: 100%;
+      height: 40px;
+      text-indent: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+  
+    #content {
+      @include inputs();
+      width: 100%;
+      box-sizing: border-box;
+      height: 300px;
+      text-indent: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      resize: none;
+    }
+  
+    input::placeholder,
+    #content::placeholder {
+      font-family: $font-poppins;
+      color: black;
+      font-weight: 500;
+    }
+  
+    input:focus,
+    #content:focus {
+      outline: none;
+      border: 2px solid rgb(61, 50, 0);
+    }
+  }
