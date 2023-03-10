@@ -15,21 +15,23 @@ const getImage = async () => {
 getImage();
 
 const addDescription = () => {
+  let container = document.createElement("div");
+  container.classList.add("subTextWrapper");
 
   const description = {
-    user: "Name - Caleb Chigozie Nwaizu",
-    age: "Age - 22",
-    residence: "Residence - Lagos, Lagos State, Nigeria",
-    hobby: "Hobbies - Reading, Writing, Playing Basketball",
+    user: "Name: Caleb Chigozie Nwaizu.",
+    age: "Age: 22.",
+    residence: "Residence: Lagos, Lagos State, Nigeria.",
+    hobby: "Hobbies: Reading, Writing, Playing Basketball.",
   };
+  let text = "";
 
   for (let item in description) {
-    const element = document.createElement("div");
+    text += `<div class="info">${description[item]}</div>`;
 
-    element.classList.add("info");
-    element.innerText = description[item];
-    wrapper.appendChild(element)
+    container.innerHTML = text;
   }
+  wrapper.appendChild(container);
 };
 
-addDescription()
+addDescription();
