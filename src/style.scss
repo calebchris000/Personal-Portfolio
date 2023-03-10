@@ -24,36 +24,6 @@ body {
   box-shadow: 20px 20px 60px #d98c00, -20px -20px 60px #ffbe00;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-}
-.navlinks {
-  display: flex;
-  justify-content: end;
-  display: none;
-  a {
-    text-decoration: none;
-    color: black;
-    margin-right: 10px;
-  }
-}
-
-.menu {
-  height: 40px;
-  width: 40px;
-  box-sizing: border-box;
-  margin: 16px;
-  align-items: center;
-
-  .bar {
-    display: block;
-    height: 8px;
-    margin-top: 4px;
-    background-color: black;
-  }
-}
-
 .top {
   @include padding();
   position: relative;
@@ -95,10 +65,10 @@ body {
 }
 
 .subTextWrapper {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top:20px
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
 }
 
 .profile {
@@ -118,64 +88,5 @@ body {
   word-wrap: break-word;
 }
 
-.projects {
-  @include padding();
-  .work {
-    @include project();
-    height: 240px;
-    margin: 10px 0;
-  }
-}
 
-@mixin inputs {
-  border-radius: 50px;
-  background: #ffa500;
-  box-shadow: inset 20px 20px 60px #d98c00, inset -20px -20px 60px #ffbe00;
-}
 
-.contact-email {
-  @include padding();
-
-  .emailMe {
-    font-family: $font-poppins;
-    text-align: center;
-    margin: 10px 0;
-    z-index: 2;
-  }
-
-  input {
-    @include inputs();
-    z-index: 1;
-    border: none;
-    width: 100%;
-    height: 40px;
-    text-indent: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-
-  #content {
-    @include inputs();
-    width: 100%;
-    box-sizing: border-box;
-    height: 300px;
-    text-indent: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    resize: none;
-  }
-
-  input::placeholder,
-  #content::placeholder {
-    font-family: $font-poppins;
-    color: black;
-    font-weight: 500;
-  }
-
-  input:focus,
-  #content:focus {
-    outline: none;
-    border: 2px solid rgb(61, 50, 0);
-  }
-}

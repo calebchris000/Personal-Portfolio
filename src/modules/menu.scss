@@ -1,0 +1,95 @@
+$blue: #003949;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 60px;
+}
+
+.navlinks {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  bottom: 0;
+  align-items: center;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  -webkit-backdrop-filter: blur(10.7px);
+  z-index: 6;
+  animation: unswoosh 0.3s ease forwards;
+
+  .link {
+    text-decoration: none;
+    color: $blue;
+    margin: 20px 0;
+    font-family: "poppins";
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    top: 100px;
+  }
+}
+
+@keyframes unswoosh {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -50%;
+  }
+}
+
+.menu {
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  margin: 16px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  .bar {
+    display: block;
+    height: 8px;
+    margin-top: 4px;
+    background-color: $blue;
+    transition: all 0.4s ease;
+  }
+}
+
+.click {
+  .bar:nth-child(1) {
+    opacity: 0;
+  }
+  .bar:nth-child(2) {
+    transform: rotateZ(45deg);
+  }
+  .bar:nth-child(3) {
+    transform: rotateZ(-45deg);
+    margin-top: -8px;
+  }
+}
+
+.showMenu {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  -webkit-backdrop-filter: blur(10.7px);
+  animation: swoosh 0.3s ease forwards;
+}
+
+@keyframes swoosh {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 0;
+  }
+}
